@@ -1,0 +1,51 @@
+body {
+    background-image: linear-gradient(to right, black, darkslategray, darkslategray); /* Visual gradiente do plano de fundo. */
+} 
+
+.dropdown {
+    position: relative;
+    width: 0vh; /* Para previnir que o menu seja aberto sem que o mouse esteja sobre o botão */
+}
+
+.dropbutton { /* Estilizando o botão de dropdown. */
+    border-radius: 2vh;
+    background-image: linear-gradient(to right, darkgreen, green);
+    color: white;
+    width: 125vh;
+    height: 18vh;
+    border: 1px solid #131313;
+    cursor: pointer;
+    font-size: larger;
+    transform: translateX(30%);
+}
+
+.dropdown:hover .dropbutton:hover{
+    background-image: linear-gradient(to right, rgb(0, 75, 0), rgb(0, 118, 0)); /* Muda a cor do botão quando você coloca o mouse em cima. */
+}
+
+.dropcontent { /* As opções que aparecem quando você coloca o mouse em cima. */
+    display: none;
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(179, 179, 179), lightgray);
+    transition: background-color 1s;
+    width: 125vh;
+    height: 22vh;
+    transform: translateX(30%);
+    cursor: pointer;
+}
+
+.dropcontent p { /* Para o texto nas opções */
+    color: black;
+    padding: 1.3vh;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.5s;
+}
+
+.dropcontent p:hover { /* Muda a cor das opções quando você coloca o mouse em cima. */
+    background-color: lightgray;
+}
+
+.dropdown:hover .dropcontent { /*Mostra as opções quando você coloca o mouse em cima. */
+    display: block;
+}
